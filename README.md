@@ -174,3 +174,11 @@ Wed Feb 10 13:30:20 UTC 2021 [INFO] Revoking token s.a0y8ucOCFZwCAazrcEDDhN9f
 Wed Feb 10 13:30:20 UTC 2021 [INFO] Deleting policy consul-template-demo-policy
 Wed Feb 10 13:30:20 UTC 2021 [INFO] Done!
 ```
+
+## Clean up
+
+While the script cleans up after itself, it leaves certain artifacts in `${CONSUL_TEMPLATE_TOP}` for you to examine, including the consul-template config, log file, sample template and the rendering from that template. After you've examined these artifacts, you may as a last step want to clean up these files.
+
+```
+$ rm -rf ${CONSUL_TEMPLATE_TOP}
+```
